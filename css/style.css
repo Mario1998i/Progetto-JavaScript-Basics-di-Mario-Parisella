@@ -9,7 +9,7 @@ body {
 
 .counter {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(/img/background.png);
+    url(../img/background.png);
     width: 50vw;
     height: 50vh;
     padding: 0 4rem;
