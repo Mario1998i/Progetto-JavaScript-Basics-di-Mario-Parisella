@@ -1,27 +1,53 @@
-const plusBtn = document.querySelector(".plus");
-const minusBtn = document.querySelector(".minus");
-const resetbtn = document.querySelector(".reset");
-let number = document.querySelector(".number");
+// Recupera i contenitori dal DOM //
+const counterContainer = document.querySelector(".counter-number");
+const buttonsContainer = document.querySelector(".buttons");
+
+// Creazione del numero iniziale e aggiunta al contenitore //
+const numberDisplay = document.createElement("h1");
+numberDisplay.className = "number";
+numberDisplay.textContent = "0";
+counterContainer.appendChild(numberDisplay);
+
+// Creazione dei pulsanti //
+const minusBtn = document.createElement("button");
+minusBtn.className = "minus";
+minusBtn.innerHTML = '<i class="bi bi-dash"></i>';
+
+const resetBtn = document.createElement("button");
+resetBtn.className = "reset";
+resetBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i>';
+
+const plusBtn = document.createElement("button");
+plusBtn.className = "plus";
+plusBtn.innerHTML = '<i class="bi bi-plus"></i>';
+
+// Aggiunta dei pulsanti al contenitore //
+buttonsContainer.appendChild(minusBtn);
+buttonsContainer.appendChild(resetBtn);
+buttonsContainer.appendChild(plusBtn);
+
 
 let value = 0;
 
+
+// Eventi per i pulsanti
 plusBtn.addEventListener("click", (add));
 minusBtn.addEventListener("click", (minus));
-resetbtn.addEventListener("click", (reset));
+resetBtn.addEventListener("click", (reset));
 
 function add() {
-    number.innerHTML = value;
+    numberDisplay.innerHTML = value;
     value++;
 }
 
 function minus() {
     value--;
-    number.innerHTML = value;
+    numberDisplay.innerHTML = value;
 }
 
 function reset() {
     value = 0;
-    number.innerHTML = 0;
+    numberDisplay.innerHTML = 0;
 }
 
 
