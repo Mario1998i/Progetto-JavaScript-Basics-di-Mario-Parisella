@@ -36,8 +36,8 @@ minusBtn.addEventListener("click", (minus));
 resetBtn.addEventListener("click", (reset));
 
 function add() {
-    numberDisplay.innerHTML = value;
     value++;
+    numberDisplay.innerHTML = value;
 }
 
 function minus() {
